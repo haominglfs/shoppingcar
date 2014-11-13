@@ -22,6 +22,8 @@ public class ProductDao {
 		ts = s.beginTransaction();
 		Query query = s.createQuery("from Product");
 		List<Product> products = query.list();
+		SessionCreater.close(sf, s);
+		
 		return products;
 	}
 }

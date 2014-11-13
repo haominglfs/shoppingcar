@@ -3,19 +3,17 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2014-11-13 17:47:44 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="cn.lut.shopping.bean.User" table="USER">
+    <class name="cn.lut.shopping.bean.User" table="login">
         <id name="id" type="int">
-            <column name="ID" />
-            <generator class="assigned" />
+            <column name="no" />
+            <generator class="native" />
         </id>
         <property name="username" type="java.lang.String">
-            <column name="USERNAME" />
+            <column name="username" />
         </property>
         <property name="password" type="java.lang.String">
-            <column name="PASSWORD" />
+            <column name="password" />
         </property>
-        <property name="password1" type="java.lang.String">
-            <column name="PASSWORD1" />
-        </property>
+       
     </class>
 </hibernate-mapping>

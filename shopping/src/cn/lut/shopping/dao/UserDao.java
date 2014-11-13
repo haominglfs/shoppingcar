@@ -34,6 +34,8 @@ public class UserDao {
 		ts = s.beginTransaction();
 		Query query = s.createQuery("from User");
 		List<User> users = query.list();
+		SessionCreater.close(sf, s);
+		
 		return users;
 	}
 }

@@ -15,6 +15,6 @@
 <s:submit value="提交"></s:submit>
 <s:reset value="重置"></s:reset>
 </s:form>
-<h1><s:property value="#session.message"/></h1>
+<h1><s:property value="#session.register_message"/></h1>
 </body>
 </html>
