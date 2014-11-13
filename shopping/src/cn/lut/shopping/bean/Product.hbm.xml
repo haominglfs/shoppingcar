@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-13 17:47:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="cn.lut.shopping.bean.Product" table="product">
+        <id name="pid" type="int">
+            <column name="pid" />
+            <generator class="native" />
+        </id>
+        <property name="pname" type="java.lang.String">
+            <column name="pname" />
+        </property>
+        <property name="pdesc" type="java.lang.String">
+            <column name="pdesc" />
+        </property>
+        <property name="pprice" type="double">
+            <column name="pprice" />
+        </property>
+    </class>
+</hibernate-mapping>

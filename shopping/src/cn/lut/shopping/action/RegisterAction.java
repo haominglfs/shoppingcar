@@ -7,7 +7,9 @@ import javax.websocket.Session;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import cn.lut.shopping.bean.Product;
 import cn.lut.shopping.bean.User;
+import cn.lut.shopping.dao.ProductDao;
 import cn.lut.shopping.dao.UserDao;
 
 public class RegisterAction implements SessionAware{
@@ -24,7 +26,7 @@ public class RegisterAction implements SessionAware{
 		this.user = user;
 	}
 
-	public String execute(){
+	public String register(){
 		
 		String username = user.getUsername();
 		String password = user.getPassword();
@@ -54,6 +56,11 @@ public class RegisterAction implements SessionAware{
 		u.setUsername(username);
 		u.setPassword(password);
 		ud.add(u);
+		
+		ProductDao pd = new ProductDao();
+		List<Product> products = pd.queryAll();
+		sessionMap.put("products", products);
+		
 		return "success";
 	}
 

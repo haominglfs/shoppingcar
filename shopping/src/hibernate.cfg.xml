@@ -15,5 +15,6 @@
     <property name="hbm2ddl.auto">update</property>
     
     <mapping resource="cn/lut/shopping/bean/User.hbm.xml"/>
+    <mapping resource="cn/lut/shopping/bean/Product.hbm.xml"/> 
     </session-factory>
 </hibernate-configuration>

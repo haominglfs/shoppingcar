@@ -6,13 +6,19 @@
 <struts>
 
 
-	<package name="shopping" extends="struts-default" >
-	
-	<action name="register" class="cn.lut.shopping.action.RegisterAction">
-	<result name="success">/index.jsp</result>
-	<result name="fail" type="redirect">/register.jsp</result>
-	</action>
+	<package name="shopping" extends="struts-default">
 
+		<action name="register" class="cn.lut.shopping.action.RegisterAction"
+			method="register">
+			<result name="success">/login.jsp</result>
+			<result name="fail" type="redirect">/register.jsp</result>
+		</action>
+
+		<action name="login" class="cn.lut.shopping.action.RegisterAction"
+			method="login">
+			<result name="success1">/index.jsp</result>
+			<result name="fail1" type="redirect">/login.jsp</result>
+		</action>
 	</package>
 
 </struts>
