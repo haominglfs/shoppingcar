@@ -26,4 +26,8 @@ public class ProductDao {
 		
 		return products;
 	}
+	
+	public void addCar(Product p){
+		
+	}
 }

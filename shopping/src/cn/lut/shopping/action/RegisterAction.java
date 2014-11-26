@@ -19,6 +19,8 @@ public class RegisterAction implements SessionAware {
 
 	private User user;
 	private Map<String, Object> sessionMap;
+	
+	
 
 	public User getUser() {
 		return user;
@@ -102,6 +104,10 @@ public class RegisterAction implements SessionAware {
 			if (username.equals(u.getUsername())) {
 				i = 1;
 				if (password.equals(u.getPassword())) {
+					ProductDao pd = new ProductDao();
+					List<Product> products = pd.queryAll();
+					sessionMap.put("products", products);
+					sessionMap.put("currentUser", u);
 					return "success1";
 				}
 			}

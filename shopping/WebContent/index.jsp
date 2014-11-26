@@ -9,5 +9,20 @@
 </head>
 <body>
 <s:debug></s:debug>
+<h1><s:property value="#session.currentUser.username"/>欢迎登陆</h1>
+<table>
+<tr>
+<th>名称</th><th>描述</th><th>价格</th>
+</tr>
+<s:iterator value="#session.products" >
+<tr>
+<td><s:property value="pname"/></td>
+<td><s:property value="pdesc"/></td>
+<td><s:property value="pprice"/></td>
+<s:checkbox  name="checkbox" value="true"/>
+</tr>
+</s:iterator>
+</table>
+<s:submit value="加入购物车"></s:submit>
 </body>
 </html>
